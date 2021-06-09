@@ -31,6 +31,9 @@ public class GameTournamentApiRestController {
     @Autowired
     private PuntuacionService puntuacionService;
 
+    @Autowired
+    private TorneoService torneoService;
+
     @GetMapping("/combates")
     public ResponseEntity<?> readAllCombates() {
         return ResponseEntity.status(HttpStatus.CREATED).body(combateService.findAll());
@@ -158,5 +161,24 @@ public class GameTournamentApiRestController {
     @PostMapping("/puntuaciones")
     public ResponseEntity<?> createPuntuacion(@RequestBody Puntuacion puntuacion) {
         return ResponseEntity.status(HttpStatus.CREATED).body(puntuacionService.save(puntuacion));
+    }
+
+    @GetMapping("/torneos")
+    public ResponseEntity<?> readAllTorneos() {
+        return ResponseEntity.status(HttpStatus.CREATED).body(torneoService.findAll());
+    }
+
+    @GetMapping("/torneos/{id}")
+    public ResponseEntity<?> readTorneo(@PathVariable(value = "id") Integer idtorneo) {
+        Optional<Torneo> oTorneo = torneoService.findById(idtorneo);
+
+        if(!oTorneo.isPresent()) return ResponseEntity.notFound().build();
+
+        return ResponseEntity.ok(oTorneo);
+    }
+
+    @PostMapping("/torneos")
+    public ResponseEntity<?> createTorneo(@RequestBody Torneo torneo) {
+        return ResponseEntity.status(HttpStatus.CREATED).body(torneoService.save(torneo));
     }
 }
