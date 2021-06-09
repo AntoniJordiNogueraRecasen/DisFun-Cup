@@ -1,8 +1,10 @@
 package com.ggtournament.gametournamentapi.entity;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
+@IdClass(PublicoId.class)
 @Table(name = "publico")
 public class Publico {
 
@@ -28,4 +30,10 @@ public class Publico {
     public void setCombate_idcombate(Integer combate_idcombate) {
         this.combate_idcombate = combate_idcombate;
     }
+}
+
+@Embeddable
+class PublicoId implements Serializable {
+    Integer espectador_idespectador;
+    Integer combate_idcombate;
 }

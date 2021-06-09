@@ -1,9 +1,6 @@
 package com.ggtournament.gametournamentapi.controller;
 
-import com.ggtournament.gametournamentapi.entity.Combate;
-import com.ggtournament.gametournamentapi.entity.Espectador;
-import com.ggtournament.gametournamentapi.entity.Participante;
-import com.ggtournament.gametournamentapi.entity.WebUser;
+import com.ggtournament.gametournamentapi.entity.*;
 import com.ggtournament.gametournamentapi.service.interfaces.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -30,6 +27,9 @@ public class GameTournamentApiRestController {
 
     @Autowired
     private PublicoService publicoService;
+
+    @Autowired
+    private PuntuacionService puntuacionService;
 
     @GetMapping("/combates")
     public ResponseEntity<?> readAllCombates() {
@@ -125,5 +125,38 @@ public class GameTournamentApiRestController {
     @GetMapping("/publicos")
     public ResponseEntity<?> readAllPublicos() {
         return ResponseEntity.status(HttpStatus.CREATED).body(publicoService.findAll());
+    }
+
+    @GetMapping("/publicos/{id}")
+    public ResponseEntity<?> readPublico(@PathVariable(value = "id") Integer idpublico) {
+        Optional<Publico> oPublico = publicoService.findById(idpublico);
+
+        if(!oPublico.isPresent()) return ResponseEntity.notFound().build();
+
+        return ResponseEntity.ok(oPublico);
+    }
+
+    @PostMapping("/publicos")
+    public ResponseEntity<?> createPublico(@RequestBody Publico publico) {
+        return ResponseEntity.status(HttpStatus.CREATED).body(publicoService.save(publico));
+    }
+
+    @GetMapping("/puntuaciones")
+    public ResponseEntity<?> readAllPuntuaciones(){
+        return ResponseEntity.status(HttpStatus.CREATED).body(puntuacionService.findAll());
+    }
+
+    @GetMapping("/puntuaciones/{id}")
+    public ResponseEntity<?> readPuntuacion(@PathVariable(value = "id") Integer idpuntuacion) {
+        Optional<Puntuacion> oPuntuacion = puntuacionService.findById(idpuntuacion);
+
+        if(!oPuntuacion.isPresent()) return ResponseEntity.notFound().build();
+
+        return ResponseEntity.ok(oPuntuacion);
+    }
+
+    @PostMapping("/puntuaciones")
+    public ResponseEntity<?> createPuntuacion(@RequestBody Puntuacion puntuacion) {
+        return ResponseEntity.status(HttpStatus.CREATED).body(puntuacionService.save(puntuacion));
     }
 }
