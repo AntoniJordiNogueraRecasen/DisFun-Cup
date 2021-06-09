@@ -2,6 +2,7 @@ package com.ggtournament.gametournamentapi.service;
 
 import com.ggtournament.gametournamentapi.entity.Combate;
 import com.ggtournament.gametournamentapi.repository.CombateRepository;
+import com.ggtournament.gametournamentapi.service.interfaces.CombateService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

@@ -1,4 +1,4 @@
-package com.ggtournament.gametournamentapi.service;
+package com.ggtournament.gametournamentapi.service.interfaces;
 
 import com.ggtournament.gametournamentapi.entity.Combate;
 import org.springframework.data.domain.Page;
