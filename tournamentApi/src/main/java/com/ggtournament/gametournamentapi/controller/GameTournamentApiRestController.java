@@ -4,10 +4,7 @@ import com.ggtournament.gametournamentapi.entity.Combate;
 import com.ggtournament.gametournamentapi.entity.Espectador;
 import com.ggtournament.gametournamentapi.entity.Participante;
 import com.ggtournament.gametournamentapi.entity.WebUser;
-import com.ggtournament.gametournamentapi.service.interfaces.CombateService;
-import com.ggtournament.gametournamentapi.service.interfaces.EspectadorService;
-import com.ggtournament.gametournamentapi.service.interfaces.ParticipanteService;
-import com.ggtournament.gametournamentapi.service.interfaces.WebUserService;
+import com.ggtournament.gametournamentapi.service.interfaces.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -30,6 +27,9 @@ public class GameTournamentApiRestController {
 
     @Autowired
     private WebUserService webUserService;
+
+    @Autowired
+    private PublicoService publicoService;
 
     @GetMapping("/combates")
     public ResponseEntity<?> readAllCombates() {
@@ -66,6 +66,11 @@ public class GameTournamentApiRestController {
 
     @PostMapping("/espectadores")
     public ResponseEntity<?> createEspectador(@RequestBody Espectador espectador) {
+        WebUser webUser = new WebUser();
+        webUser.setEmail(espectador.getEmail());
+        webUser.setPassword(espectador.getPassword());
+
+        webUserService.save(webUser);
         return ResponseEntity.status(HttpStatus.CREATED).body(espectadorService.save(espectador));
     }
 
@@ -115,5 +120,10 @@ public class GameTournamentApiRestController {
     @PostMapping("/webusers")
     public ResponseEntity<?> createWebUser(@RequestBody WebUser webUser) {
         return ResponseEntity.status(HttpStatus.CREATED).body(webUserService.save(webUser));
+    }
+
+    @GetMapping("/publicos")
+    public ResponseEntity<?> readAllPublicos() {
+        return ResponseEntity.status(HttpStatus.CREATED).body(publicoService.findAll());
     }
 }
