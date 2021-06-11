@@ -20,7 +20,7 @@ public class Participante {
     private String email;
     @Column(name = "telefono", nullable = true, length = 45)
     private String telefono;
-    @Column(name = "password", nullable = false, unique = true ,length = 200)
+    @Column(name = "password", nullable = false, length = 200)
     private String password;
     @Column(name = "discapacidad", nullable = false, length = 45)
     private String discapacidad;

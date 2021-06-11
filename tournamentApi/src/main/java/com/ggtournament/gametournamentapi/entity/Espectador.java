@@ -13,9 +13,9 @@ public class Espectador {
     private String asiento;
     @Column(name = "apuesta", nullable = true, length = 45)
     private String apuesta;
-    @Column(name = "dni", nullable = false, length = 45)
+    @Column(name = "dni", nullable = false, unique = true, length = 45)
     private String dni;
-    @Column(name = "email", nullable = false, length = 45)
+    @Column(name = "email", nullable = false, unique = true, length = 45)
     private String email;
     @Column(name = "telefono", nullable = true, length = 45)
     private String telefono;
