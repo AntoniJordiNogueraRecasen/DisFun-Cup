@@ -32,7 +32,7 @@ function Contact() {
                 </li>
                 <li>
                   {" "}
-                  <a href="mailto:correoempresa@gmail.com">
+                  <a className="gmail" href="mailto:correoempresa@gmail.com">
                     DisfunCup@nombre.com
                   </a>
                 </li>

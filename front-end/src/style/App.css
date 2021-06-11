@@ -2,7 +2,9 @@ img.notice {
   width: 500px;
   height: 500px;
 }
-
+.gmail {
+  color: darkblue;
+}
 .b-example-divider {
   height: 3rem;
   background-color: rgba(0, 0, 0, 0.1);

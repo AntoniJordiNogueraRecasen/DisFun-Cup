@@ -96,3 +96,35 @@
 .fondo {
   height: 250px;
 }
+a {
+  text-decoration: none;
+  color: #fff;
+}
+.rainbow-button {
+  width: calc(10vw + 3px);
+  height: calc(3vw + 1.5px);
+  background-image: linear-gradient(
+    90deg,
+    #00c0ff 0,
+    #ffcf00 49%,
+    #fc4f4f 80%,
+    #00c0ff 100%
+  );
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  font-size: 1.5vw;
+  font-weight: 700;
+}
+
+.rainbow-button:hover {
+  animation: slidebg 2s linear infinite;
+  color: black;
+}
+@keyframes slidebg {
+  to {
+    background-position: 20vw;
+  }
+}

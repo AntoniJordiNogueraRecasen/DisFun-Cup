@@ -10,7 +10,9 @@ function Lol() {
       <div class="col fondo">
         <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg fondoLol">
           <div>
-            <Button>Apuntate</Button>
+            <a href="#" class="rainbow-button">
+              Apuntate
+            </a>
           </div>
         </div>
       </div>
@@ -23,7 +25,9 @@ function Clash() {
       <div class="col fondo">
         <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg fondoClash">
           <div>
-            <Button>Apuntate</Button>
+            <a href="#" class="rainbow-button">
+              Apuntate
+            </a>
           </div>
         </div>
       </div>
@@ -36,7 +40,9 @@ function Fifa() {
       <div class="col fondo">
         <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg fondoFifa">
           <div>
-            <Button>Apuntate</Button>
+            <a href="#" class="rainbow-button">
+              Apuntate
+            </a>
           </div>
         </div>
       </div>
@@ -49,7 +55,9 @@ function Pubg() {
       <div class="col fondo">
         <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg fondoPUBG">
           <div>
-            <Button>Apuntate</Button>
+            <a href="#" class="rainbow-button">
+              Apuntate
+            </a>
           </div>
         </div>
       </div>
@@ -62,7 +70,9 @@ function GTS() {
       <div class="col fondo">
         <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg fondoGTS">
           <div>
-            <Button>Apuntate</Button>
+            <a href="#" class="rainbow-button">
+              Apuntate
+            </a>
           </div>
         </div>
       </div>
@@ -75,7 +85,9 @@ function Fortnite() {
       <div class="col fondo">
         <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg fondoFortnite">
           <div>
-            <Button className="apuntate">Apuntate</Button>
+            <a href="#" class="rainbow-button">
+              Apuntate
+            </a>
           </div>
         </div>
       </div>
