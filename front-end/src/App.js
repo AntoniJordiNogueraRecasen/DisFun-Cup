@@ -10,6 +10,7 @@ import Login from "./Login";
 import Contact from "./Contact.js";
 import Cups from "./Cups.js";
 import News from "./News.js";
+import Torneo from "./Torneo";
 import { BrowserRouter, Link, Switch, Route } from "react-router-dom";
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
           <Route path="/contact" render={() => <Contact />} />
           <Route path="/cups" render={() => <Cups />} />
           <Route path="/news" render={() => <News />} />
+          <Route path="/torneo" render={() => <Torneo />} />
         </Switch>
       </BrowserRouter>
     </>

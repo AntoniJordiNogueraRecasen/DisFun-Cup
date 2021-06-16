@@ -13,6 +13,9 @@ function Lol() {
             <a href="#" class="rainbow-button">
               Apuntate
             </a>
+            <Button>
+              <a>Ver</a>
+            </Button>
           </div>
         </div>
       </div>
@@ -28,6 +31,9 @@ function Clash() {
             <a href="#" class="rainbow-button">
               Apuntate
             </a>
+            <Button>
+              <a>Ver</a>
+            </Button>
           </div>
         </div>
       </div>
@@ -43,6 +49,9 @@ function Fifa() {
             <a href="#" class="rainbow-button">
               Apuntate
             </a>
+            <Button>
+              <a>Ver</a>
+            </Button>
           </div>
         </div>
       </div>
@@ -58,6 +67,9 @@ function Pubg() {
             <a href="#" class="rainbow-button">
               Apuntate
             </a>
+            <Button>
+              <a>Ver</a>
+            </Button>
           </div>
         </div>
       </div>
@@ -73,6 +85,9 @@ function GTS() {
             <a href="#" class="rainbow-button">
               Apuntate
             </a>
+            <Button>
+              <a>Ver</a>
+            </Button>
           </div>
         </div>
       </div>
@@ -88,6 +103,9 @@ function Fortnite() {
             <a href="#" class="rainbow-button">
               Apuntate
             </a>
+            <Button>
+              <a>Ver</a>
+            </Button>
           </div>
         </div>
       </div>
