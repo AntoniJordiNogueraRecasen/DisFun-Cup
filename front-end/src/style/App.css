@@ -188,3 +188,6 @@ tr:nth-child(even) {
   position: absolute;
   right: 15px;
 }
+.info {
+  background-color: cyan;
+}

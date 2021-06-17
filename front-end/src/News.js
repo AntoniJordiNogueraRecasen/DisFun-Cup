@@ -27,7 +27,7 @@ function Rocky() {
               con la boca.
             </p>
             <a href="https://laverdadnoticias.com/viral/Rocky-el-gamer-con-discapacidad-que-juega-Call-of-Duty-con-la-boca-se-hizo-viral-20200727-0209.html">
-              <Button>Noticia</Button>
+              <Button class="info">Noticia</Button>
             </a>
           </div>
         </div>
