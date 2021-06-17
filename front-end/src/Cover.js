@@ -1,6 +1,6 @@
 import "./style/App.css";
 import React from "react";
-import "./style/cover.css";
+
 import { Button } from "reactstrap";
 import "./style/bootstrap.min.css";
 
