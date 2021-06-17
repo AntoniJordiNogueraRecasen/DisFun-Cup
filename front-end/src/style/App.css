@@ -39,8 +39,7 @@ img.notice {
   outline: 0;
 }
 .icon {
-  height: 75px;
-  width: 75px;
+  width: 30px;
 }
 /* GLOBAL STYLES
 -------------------------------------------------- */
@@ -183,4 +182,9 @@ tr {
 tr:nth-child(even) {
   background-color: darkviolet;
   color: white;
+}
+.sign {
+  display: flex;
+  position: absolute;
+  right: 15px;
 }
