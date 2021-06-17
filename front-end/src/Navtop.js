@@ -57,47 +57,46 @@ function Subscribe() {
 function NavTop() {
   return (
     <div class="container">
-      <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
-        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-          <div class="container-fluid">
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarCollapse"
-              aria-controls="navbarCollapse"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-              <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                <li class="nav-item">
-                  <NavCasa />
-                </li>
-                <li class="nav-item">
-                  <News />
-                </li>
-                <li class="nav-item">
-                  <Contact />
-                </li>
-                <li class="nav-item">
-                  <Who />
-                </li>
-                <li class="nav-item">
-                  <Cups />
-                </li>
-                <div className="sign">
-                  <Inscribe />
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container-fluid">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarCollapse"
+            aria-controls="navbarCollapse"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+              <li class="nav-item">
+                <NavCasa />
+              </li>
+              <li class="nav-item">
+                <News />
+              </li>
+              <li class="nav-item">
+                <Contact />
+              </li>
+              <li class="nav-item">
+                <Who />
+              </li>
+              <li class="nav-item">
+                <Cups />
+              </li>
+              <div className="sign">
+                <Inscribe />
 
-                  <Subscribe />
-                </div>
-              </ul>
-            </div>
+                <Subscribe />
+              </div>
+            </ul>
           </div>
-        </nav>
-      </header>
+        </div>
+      </nav>
+      <br></br>
     </div>
   );
 }
