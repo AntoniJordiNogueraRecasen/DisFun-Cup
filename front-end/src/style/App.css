@@ -149,9 +149,10 @@ div.izquierda {
 }
 div.selector {
   margin: 50px;
+  text-align: center;
 }
 .player {
-  margin-right: 80px;
+  margin: 10px;
   height: 50px;
   width: 200px;
 }
@@ -205,3 +206,16 @@ tr:nth-child(even) {
 .card-body {
   background-color: #e4e4b186;
 }
+
+.ver {
+  color: rgb(255, 255, 255);
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  background-color:rgba(5, 5, 5, 0.404);
+  border: 0px;
+}
+.ver:hover {
+  background-color: black;
+}
+/*ver:focus*/
