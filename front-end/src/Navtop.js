@@ -1,20 +1,18 @@
-import "./style/App.css";
 import React from "react";
 import iconCasa from "./img/house.png";
 import "./style/bootstrap.min.css";
 import { BrowserRouter, Link, Switch, Route } from "react-router-dom";
-
+import "./style/App.css";
 function NavCasa() {
   return (
     <Link to="/" class="nav-link px-2">
-      {" "}
       <img src={iconCasa} alt="casa" class="icon" />
     </Link>
   );
 }
 function Who() {
   return (
-    <Link to="/who" class="nav-link px-2">
+    <Link to="/who" class="nav-link px-2 ">
       Quienes somos?
     </Link>
   );
@@ -60,33 +58,45 @@ function NavTop() {
   return (
     <div class="container">
       <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
-        <a
-          href="/"
-          class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none"
-        ></a>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+          <div class="container-fluid">
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarCollapse"
+              aria-controls="navbarCollapse"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+              <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                <li class="nav-item">
+                  <NavCasa />
+                </li>
+                <li class="nav-item">
+                  <News />
+                </li>
+                <li class="nav-item">
+                  <Contact />
+                </li>
+                <li class="nav-item">
+                  <Who />
+                </li>
+                <li class="nav-item">
+                  <Cups />
+                </li>
+                <div className="sign">
+                  <Inscribe />
 
-        <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0 navegador">
-          <li>
-            <NavCasa />
-          </li>
-          <li>
-            <News />
-          </li>
-          <li>
-            <Contact />
-          </li>
-          <li>
-            <Who />
-          </li>
-          <li>
-            <Cups />
-          </li>
-        </ul>
-
-        <div class="col-md-3 text-end">
-          <Inscribe />
-          <Subscribe />
-        </div>
+                  <Subscribe />
+                </div>
+              </ul>
+            </div>
+          </div>
+        </nav>
       </header>
     </div>
   );
