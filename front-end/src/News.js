@@ -27,7 +27,7 @@ function Rocky() {
               con la boca.
             </p>
             <a href="https://laverdadnoticias.com/viral/Rocky-el-gamer-con-discapacidad-que-juega-Call-of-Duty-con-la-boca-se-hizo-viral-20200727-0209.html">
-              <Button class="info">Noticia</Button>
+              <button class="info">Noticia</button>
             </a>
           </div>
         </div>
@@ -53,7 +53,7 @@ function Moyorz() {
               juego Fortninte
             </p>
             <a href="https://cadenaser.com/ser/2019/08/11/cultura/1565509697_923737.html">
-              <Button>Noticia</Button>
+              <button class="info">Noticia</button>
             </a>
           </div>
         </div>
@@ -79,7 +79,7 @@ function Xbox() {
             </p>
             <br></br>
             <a href="https://www.semana.com/tecnologia/articulo/xbox-crea-un-programa-con-jugadores-discapacitados-para-mejorar-la-accesibilidad/202140/">
-              <Button>Noticia</Button>
+              <button class="info">Noticia</button>
             </a>
           </div>
         </div>
@@ -107,7 +107,7 @@ function Campana() {
               discapacidad puedan jugar.
             </p>
             <a href="https://www.infobae.com/gaming/2020/09/25/la-campana-de-donacion-para-que-mas-personas-con-discapacidad-puedan-jugar-videojuegos/">
-              <Button>Noticia</Button>
+              <button class="info">Noticia</button>
             </a>
           </div>
         </div>

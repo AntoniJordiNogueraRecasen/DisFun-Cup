@@ -190,4 +190,12 @@ tr:nth-child(even) {
 }
 .info {
   background-color: cyan;
+  border-radius: 45em;
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  border-color: black;
+}
+.info:hover {
+  background-color: darkcyan;
 }
