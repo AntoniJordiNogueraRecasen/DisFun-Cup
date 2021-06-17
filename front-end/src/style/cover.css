@@ -3,12 +3,19 @@
  */
 
 /* Custom default button */
-.btn-secondary,
-.btn-secondary:hover,
-.btn-secondary:focus {
-  color: #333;
-  text-shadow: none; /* Prevent inheritance from `body` */
+.btn-secondary {
+  color: rgb(255, 255, 255);
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  background-color:transparent;
+  border: 0px;
 }
+.btn-secondary:hover {
+  background-color: black;
+}
+/*.btn-secondary:focus*/
+  
 
 /*
  * Base structure
