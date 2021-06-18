@@ -13,9 +13,9 @@ function Lol() {
             <a href="#" class="rainbow-button">
               Apuntate
             </a>
-            <Button className="ver">
-              <a>Ver</a>
-            </Button>
+            <a href="/torneo">
+              <button className="ver">VER</button>
+            </a>
           </div>
         </div>
       </div>
@@ -31,9 +31,9 @@ function Clash() {
             <a href="#" class="rainbow-button">
               Apuntate
             </a>
-            <Button className="ver">
-              <a>Ver</a>
-            </Button>
+            <a href="/torneo">
+              <button className="ver">VER</button>
+            </a>
           </div>
         </div>
       </div>
@@ -49,9 +49,9 @@ function Fifa() {
             <a href="#" class="rainbow-button">
               Apuntate
             </a>
-            <Button className="ver">
-              <a>Ver</a>
-            </Button>
+            <a href="/torneo">
+              <button className="ver">VER</button>
+            </a>
           </div>
         </div>
       </div>
@@ -67,9 +67,9 @@ function Pubg() {
             <a href="#" class="rainbow-button">
               Apuntate
             </a>
-            <Button className="ver">
-              <a>Ver</a>
-            </Button>
+            <a href="/torneo">
+              <button className="ver">VER</button>
+            </a>
           </div>
         </div>
       </div>
@@ -85,9 +85,9 @@ function GTS() {
             <a href="#" class="rainbow-button">
               Apuntate
             </a>
-            <Button className="ver">
-              <a>Ver</a>
-            </Button>
+            <a href="/torneo">
+              <button className="ver">VER</button>
+            </a>
           </div>
         </div>
       </div>
@@ -97,15 +97,15 @@ function GTS() {
 function Fortnite() {
   return (
     <>
-      <div class="col fondo">
-        <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg fondoFortnite">
+      <div class="col fondo ">
+        <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg fondoFortnite ">
           <div>
             <a href="#" class="rainbow-button">
               Apuntate
             </a>
-            <Button className="ver">
-              <a>Ver</a>
-            </Button>
+            <a href="/torneo">
+              <button className="ver">VER</button>
+            </a>
           </div>
         </div>
       </div>
@@ -118,7 +118,8 @@ function Cups() {
       <main>
         <div class="container">
           <div class="container px-4 py-5" id="custom-cards">
-            <h2 class="pb-2 border-bottom">Torneos</h2>
+            <h1 class="titulo">Torneos</h1>
+            <hr></hr>
 
             <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
               <Fortnite />
