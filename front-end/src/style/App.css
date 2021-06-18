@@ -107,7 +107,8 @@ body {
 /* Thin out the marketing headings */
 .featurette-heading {
   font-weight: 300;
-  line-height: 1;
+  line-height: 1;  
+  top: 10px;
 }
 
 /* RESPONSIVE CSS
@@ -247,3 +248,14 @@ tr:nth-child(even) {
 li {
   list-style: none;
 }
+
+.boxh {
+  display: inline-block;
+  width: 100%;
+}
+
+.boxj {
+  display: inline-block;
+  text-align: left;
+}
+

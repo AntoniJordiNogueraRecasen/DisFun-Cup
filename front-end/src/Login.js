@@ -35,7 +35,7 @@ const Login = (props) => {
       <div class="container">
         <main>
           <div class="py-5 text-center">
-            <h2>Iniciar sessión</h2>
+            <h2>Iniciar sesión</h2>
           </div>
 
           <div class="row g-5">
