@@ -5,10 +5,9 @@ import "./style/bootstrap.min.css";
 function Torneo() {
   return (
     <>
+      <h1 class="titulo">Torneos</h1>
+      <hr></hr>
       <div class="col-lg-8 mx-auto p-3 py-md-5">
-        <header class="d-flex align-items-center pb-3 mb-5 border-bottom">
-          <h1>Torneos</h1>
-        </header>
         <main>
           <div>
             <table>

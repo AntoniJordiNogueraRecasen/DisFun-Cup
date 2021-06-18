@@ -101,8 +101,11 @@ a {
   color: #fff;
 }
 .rainbow-button {
-  width: calc(10vw + 3px);
-  height: calc(3vw + 1.5px);
+  width: 60%;
+  padding-left: 35px;
+  padding-right: 35px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   background-image: linear-gradient(
     90deg,
     #00c0ff 0,

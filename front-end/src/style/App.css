@@ -133,6 +133,7 @@ body {
 }
 h1.titulo {
   text-align: center;
+  text-transform: uppercase;
 }
 .navegador li {
   text-decoration: solid;
@@ -207,17 +208,26 @@ tr:nth-child(even) {
 }
 
 .ver {
-  color: rgb(255, 255, 255);
+  background-color: white;
+  border-radius: 45em;
   position: absolute;
+  color: black;
   right: 0px;
   top: 0px;
-  background-color:rgba(5, 5, 5, 0.404);
-  border: 0px;
+  font-weight: bold;
+
+  font-style: oblique;
+  border-color: grey;
+  border-style: solid;
+  border-width: 0.5px;
+  padding: 4px 10px 4px 10px;
 }
 .ver:hover {
   background-color: black;
+  color: white;
+  border-width: 3px;
+  border-color: #5a5a5a54;
 }
-/*ver:focus*/
 
 .white {
   background-color: rgba(255, 255, 255, 0.301);
@@ -237,4 +247,3 @@ tr:nth-child(even) {
 li {
   list-style: none;
 }
-
