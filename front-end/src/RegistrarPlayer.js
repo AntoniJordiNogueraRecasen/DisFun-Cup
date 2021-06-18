@@ -13,9 +13,9 @@ function ResgistrarPlayer() {
             </p>
           </div>
 
-          <div class="row g-5">
-            <div class="col-md-5 col-lg-4 order-md-last"></div>
-            <div class="col-md-7 col-lg-8">
+          <div class="row g-5 boxh">
+            
+            <div class="col-md-7 col-lg-8 boxj">
               <h4 class="mb-3">Registro Jugador</h4>
               <form class="needs-validation" novalidate>
                 <div class="row g-3">

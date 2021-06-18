@@ -7,12 +7,12 @@ function Login() {
       <div class="container">
         <main>
           <div class="py-5 text-center">
-            <h2>Iniciar sessión</h2>
+            <h2>Iniciar sesión</h2>
           </div>
 
-          <div class="row g-5">
-            <div class="col-md-5 col-lg-4 order-md-last"></div>
-            <div class="col-md-7 col-lg-8">
+          <div class="row boxh">
+          
+            <div class="col-md-7 col-lg-8 textalign">
               <form class="needs-validation" novalidate>
                 <div class="col-12">
                   <label for="email" class="form-label">
