@@ -65,7 +65,7 @@ const Login = (props) => {
                   </Col>
                 </Row>
 
-                <Row style={{ "margin-top": "15px" }}>
+                <Row style={{ marginTop: "15px" }}>
                   <Col>
                     <Button type="submit">Login</Button>{" "}
                     <Button type="button" onClick={cancelar}>

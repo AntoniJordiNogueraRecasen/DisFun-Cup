@@ -18,18 +18,13 @@ import WebUserModel from "./models/WebUser";
 
 function App() {
   const [uid, setUID] = useState(0);
-  const [promise, setPromise] = useState();
   const [user, setUser] = useState({});
 
   async function loadData() {
     if (uid === 0) {
       return;
     } else {
-      setPromise(WebUserModel.getSpecificUser(uid));
-      promise.then(async (data) => {
-        setUser(data);
-        console.log(user);
-      });
+      console.log("UID VALUE: " + uid);
     }
   }
 
@@ -37,6 +32,12 @@ function App() {
     let x = await WebUserModel.login(email, password);
     console.log("USER LOGIN: " + x.idwebuser);
     setUID(x.idwebuser);
+    let promise = WebUserModel.getSpecificUser(x.idwebuser);
+    promise.then((data) => {
+      let user = data;
+      console.log(user);
+      setUser(user);
+    });
     loadData();
   }
 
@@ -48,7 +49,7 @@ function App() {
     <>
       <BrowserRouter>
         <NavTop />
-        <Container className="switchContainer">
+        <Container>
           <Switch>
             <Route exact path="/" render={() => <Corepage />} />
             <Route path="/who" render={() => <WhoIs />} />
