@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Optional;
 
 @RestController
+@CrossOrigin
 @RequestMapping("/api/gametournamentapi")
 public class GameTournamentApiRestController {
 
@@ -70,6 +71,7 @@ public class GameTournamentApiRestController {
     @PostMapping("/espectadores")
     public ResponseEntity<?> createEspectador(@RequestBody Espectador espectador) {
         WebUser webUser = new WebUser();
+        webUser.setIdwebuser(espectador.getIdespectador());
         webUser.setEmail(espectador.getEmail());
         webUser.setPassword(espectador.getPassword());
 
@@ -94,6 +96,7 @@ public class GameTournamentApiRestController {
     @PostMapping("/participantes")
     public ResponseEntity<?> createParticipante(@RequestBody Participante participante) {
         WebUser webUser = new WebUser();
+        webUser.setIdwebuser(participante.getIdparticipante());
         webUser.setEmail(participante.getEmail());
         webUser.setPassword(participante.getPassword());
 
@@ -101,14 +104,39 @@ public class GameTournamentApiRestController {
         return ResponseEntity.status(HttpStatus.CREATED).body(participanteService.save(participante));
     }
 
-    @PostMapping("/login/{email}/{password}")
-    public ResponseEntity<?> loginInWeb(@PathVariable(value = "email") String email , @PathVariable(value = "password") String password) {
-        return ResponseEntity.status(HttpStatus.CREATED).body(webUserService.findByEmailPassword(email, password));
+    @PostMapping("/login")
+    public ResponseEntity<?> loginInWeb(@RequestBody WebUser webUser) {
+        return ResponseEntity.status(HttpStatus.CREATED).body(webUserService.findByEmailPassword(webUser.getEmail(), webUser.getPassword()));
     }
 
     @GetMapping("/webusers")
     public ResponseEntity<?> readAllWebUsers() {
         return ResponseEntity.status(HttpStatus.CREATED).body(webUserService.findAll());
+    }
+
+    @GetMapping("/user/{id}")
+    public ResponseEntity<?> readUser(@PathVariable(value = "id") Integer iduser) {
+        Optional oUser = readUserParticipante(iduser);
+
+        if(oUser.isPresent()) return ResponseEntity.ok(oUser);
+
+        oUser = readUserParticipante(iduser);
+
+        if(oUser.isPresent()) return ResponseEntity.ok(oUser);
+
+        return ResponseEntity.notFound().build();
+    }
+
+    private Optional readUserParticipante(Integer idparticipante) {
+        Optional<Participante> oParticipante = participanteService.findById(idparticipante);
+
+        return oParticipante;
+    }
+
+    private Optional readUserEspectador(Integer idespectador){
+        Optional<Espectador> oEspectador = espectadorService.findById(idespectador);
+
+        return oEspectador;
     }
 
     @GetMapping("/webusers/{id}")

@@ -7,7 +7,6 @@ import javax.persistence.*;
 public class WebUser {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idwebuser;
     @Column(name = "email", nullable = false, unique = true, length = 45)
     private String email;
