@@ -122,7 +122,8 @@ function ModeloNegocio() {
 function WhoIs() {
   return (
     <>
-      <h1 class="titulo">Quien SOMOS?</h1>
+      <h1 class="titulo">Quienes SOMOS?</h1>
+      <hr></hr>
       <div class="container marketing">
         <br></br>
         <Empresa />

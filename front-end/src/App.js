@@ -13,7 +13,6 @@ import News from "./News.js";
 import Torneo from "./Torneo";
 import { BrowserRouter, Link, Switch, Route } from "react-router-dom";
 import { Container, Row, Col } from "reactstrap";
-
 function App() {
   return (
     <>
