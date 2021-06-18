@@ -3,10 +3,6 @@ body {
   height: 100%;
 }
 
-.container {
-  text-align: center;
-}
-
 .form-signin {
   width: 100%;
   max-width: 330px;
