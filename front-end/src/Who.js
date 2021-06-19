@@ -28,7 +28,7 @@ function CircleNews() {
           <img src={Pau} class="carrusel1 rounded-circle nosotros"></img>
 
           <h2>Pau Cuenca</h2>
-          <p>Mi porque del proyecto</p>
+          <p>Nuestra pequeña aportación a la sociedad</p>
         </div>
       </div>
     </>
