@@ -56,7 +56,7 @@ function Subscribe() {
 
 function NavTop() {
   return (
-    <div class="container">
+   <>
       <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <div class="container-fluid">
           <button
@@ -97,7 +97,7 @@ function NavTop() {
         </div>
       </nav>
       <br></br>
-    </div>
+   </>
   );
 }
 

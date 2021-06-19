@@ -32,20 +32,19 @@ const Login = (props) => {
 
   return (
     <>
-      <div class="container">
+ 
         <main>
           <div class="py-5 text-center">
-            <h2>Iniciar sesión</h2>
+            <h1 class="titulo">Iniciar sesión</h1>
+            <hr></hr>
           </div>
 
-          <div class="row g-5">
-            <div class="col-md-5 col-lg-4 order-md-last"></div>
-            <div class="col-md-7 col-lg-8">
-              <Form onSubmit={login}>
+          <div class="row g-4">
+            <div class="col-md-4 col-lg-4 order-md-last">  <Form onSubmit={login}>
                 <Row>
                   <Col lg="12">
                     <FormGroup>
-                      <Label for="nombreInput">E-mail</Label>
+                      <Label for="nombreInput">Correo electrónico</Label>
                       <Input
                         type="email"
                         id="emailInput"
@@ -54,7 +53,7 @@ const Login = (props) => {
                       />
                     </FormGroup>
                     <FormGroup>
-                      <Label for="emailInput">Password</Label>
+                      <Label for="emailInput">Contraseña</Label>
                       <Input
                         type="password"
                         id="passwordInput"
@@ -67,17 +66,20 @@ const Login = (props) => {
 
                 <Row style={{ marginTop: "15px" }}>
                   <Col>
-                    <Button type="submit">Login</Button>{" "}
-                    <Button type="button" onClick={cancelar}>
+                    <Button type="submit" color="primary">Entrar</Button>{" "}
+                    <Button  class="btn btn-danger"type="button" onClick={cancelar} >
                       Cancelar
                     </Button>
+                   
                   </Col>
                 </Row>
-              </Form>
+              </Form></div>
+            <div class="col-md-4 col-lg-4">
+            
             </div>
           </div>
         </main>
-      </div>
+ 
     </>
   );
 };
