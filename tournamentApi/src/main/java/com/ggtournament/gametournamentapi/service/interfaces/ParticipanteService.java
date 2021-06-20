@@ -10,6 +10,8 @@ public interface ParticipanteService {
 
     public Optional<Participante> findById(Integer id);
 
+    public Participante findByEmail(String email);
+
     public Participante save(Participante participante);
 
     public void deleteById(Integer id);

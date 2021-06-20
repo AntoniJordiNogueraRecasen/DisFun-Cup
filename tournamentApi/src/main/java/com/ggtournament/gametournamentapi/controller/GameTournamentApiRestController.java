@@ -71,7 +71,6 @@ public class GameTournamentApiRestController {
     @PostMapping("/espectadores")
     public ResponseEntity<?> createEspectador(@RequestBody Espectador espectador) {
         WebUser webUser = new WebUser();
-        webUser.setIdwebuser(espectador.getIdespectador());
         webUser.setEmail(espectador.getEmail());
         webUser.setPassword(espectador.getPassword());
 
@@ -114,29 +113,25 @@ public class GameTournamentApiRestController {
         return ResponseEntity.status(HttpStatus.CREATED).body(webUserService.findAll());
     }
 
-    @GetMapping("/user/{id}")
-    public ResponseEntity<?> readUser(@PathVariable(value = "id") Integer iduser) {
-        Optional oUser = readUserParticipante(iduser);
+    @GetMapping("/user/{email}")
+    public ResponseEntity<?> readUser(@PathVariable(value = "email") String email) {
+        Participante participante = readUserParticipante(email);
 
-        if(oUser.isPresent()) return ResponseEntity.ok(oUser);
+        if(participante != null) return ResponseEntity.ok(participante);
 
-        oUser = readUserParticipante(iduser);
+        Espectador espectador = readUserEspectador(email);
 
-        if(oUser.isPresent()) return ResponseEntity.ok(oUser);
+        if(espectador != null) return ResponseEntity.ok(espectador);
 
         return ResponseEntity.notFound().build();
     }
 
-    private Optional readUserParticipante(Integer idparticipante) {
-        Optional<Participante> oParticipante = participanteService.findById(idparticipante);
-
-        return oParticipante;
+    private Participante readUserParticipante(String email) {
+        return participanteService.findByEmail(email);
     }
 
-    private Optional readUserEspectador(Integer idespectador){
-        Optional<Espectador> oEspectador = espectadorService.findById(idespectador);
-
-        return oEspectador;
+    private Espectador readUserEspectador(String email){
+        return espectadorService.findByEmail(email);
     }
 
     @GetMapping("/webusers/{id}")

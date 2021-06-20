@@ -25,13 +25,13 @@ async function login(email, password) {
   }
 }
 
-async function getSpecificUser(uid) {
+async function getSpecificUser(email) {
   const opcionesFetch = {
     method: "GET",
     headers: HEADERS,
   };
 
-  const response = await fetch(GETAPI + uid, opcionesFetch);
+  const response = await fetch(GETAPI + email, opcionesFetch);
   if (response.ok) {
     const resp = await response.json();
     return resp;

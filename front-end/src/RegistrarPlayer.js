@@ -1,7 +1,49 @@
 import "./style/App.css";
-import React from "react";
+import React, { useState } from "react";
 import "./style/form-validation.css";
-function ResgistrarPlayer() {
+
+import { Button, Form, FormGroup, Label, Input } from "reactstrap";
+import { Row, Col } from "reactstrap";
+import { Redirect } from "react-router-dom";
+const ResgistrarPlayer = (props) => {
+  const [nombre, setNombre] = useState("");
+  const [apellido, setApellido] = useState("");
+  const [dni, setDNI] = useState("");
+  const [email, setEmail] = useState("");
+  const [telefono, setTelefono] = useState(null);
+  const [password, setPassword] = useState("");
+  const [discapacidad, setDiscapacidad] = useState("");
+  const [fechaNacimiento, setFechaNacimiento] = useState();
+
+  const [volver, setVolver] = useState(false);
+
+  function register(e) {
+    e.preventDefault();
+
+    let playerData = {
+      nombre: nombre,
+      apellido: apellido,
+      dni: dni,
+      email: email,
+      telefono: telefono,
+      password: password,
+      discapacidad: discapacidad,
+      fechaNacimiento: fechaNacimiento,
+    };
+
+    props.registerPlayer(playerData);
+
+    setVolver(true);
+  }
+
+  function cancelar() {
+    setVolver(true);
+  }
+
+  if (volver === true) {
+    return <Redirect to="/login" />;
+  }
+
   return (
     <>
       <div class="container">
@@ -14,144 +56,109 @@ function ResgistrarPlayer() {
           </div>
 
           <div class="row g-5 boxh">
-            
             <div class="col-md-7 col-lg-8 boxj">
               <h4 class="mb-3">Registro Jugador</h4>
-              <form class="needs-validation" novalidate>
-                <div class="row g-3">
-                  <div class="col-sm-6">
-                    <label for="firstName" class="form-label">
-                      Nombre
-                    </label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="firstName"
-                      placeholder=""
-                      value=""
-                      required
-                    ></input>
-                    <div class="invalid-feedback">
-                      Introduzca un nombre válido.
-                    </div>
-                  </div>
-
-                  <div class="col-sm-6">
-                    <label for="lastName" class="form-label">
-                      Apellidos
-                    </label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="lastName"
-                      placeholder=""
-                      value=""
-                      required
-                    ></input>
-                    <div class="invalid-feedback">
-                      Introduzca un apellido válido
-                    </div>
-                  </div>
-
-                  <div class="col-12">
-                    <label for="username" class="form-label">
-                      DNI
-                    </label>
-                    <div class="input-group has-validation">
-                      <input
+              <Form onSubmit={register}>
+                <Row>
+                  <Col lg="12">
+                    <FormGroup>
+                      <Label for="nombreInput">Nombre</Label>
+                      <Input
                         type="text"
-                        class="form-control"
-                        id="username"
-                        placeholder="DNI"
-                        required
-                      ></input>
-                      <div class="invalid-feedback">
-                        Introduzca un Nombre de Usuario
-                      </div>
-                    </div>
-                  </div>
+                        id="nombreInput"
+                        value={nombre}
+                        onChange={(e) => setNombre(e.target.value)}
+                      />
+                    </FormGroup>
+                    <FormGroup>
+                      <Label for="apellidoInput">Apellido</Label>
+                      <Input
+                        type="text"
+                        id="apellidoInput"
+                        value={apellido}
+                        onChange={(e) => setApellido(e.target.value)}
+                      />
+                    </FormGroup>
+                    <FormGroup>
+                      <Label for="dniInput">DNI</Label>
+                      <Input
+                        type="text"
+                        id="dniInput"
+                        value={dni}
+                        onChange={(e) => setDNI(e.target.value)}
+                      />
+                    </FormGroup>
+                    <FormGroup>
+                      <Label for="emailInput">E-mail</Label>
+                      <Input
+                        type="email"
+                        id="emailInput"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                      />
+                    </FormGroup>
+                    <FormGroup>
+                      <Label for="telefonoInput">Telefono</Label>
+                      <Input
+                        type="text"
+                        id="telefonoInput"
+                        value={telefono}
+                        onChange={(e) => setTelefono(e.target.value)}
+                      />
+                    </FormGroup>
+                    <FormGroup>
+                      <Label for="passwordInput">Contraseña</Label>
+                      <Input
+                        type="password"
+                        id="passwordInput"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                      />
+                    </FormGroup>
+                    <FormGroup>
+                      <Label for="discapacidadInput">Discapacidad</Label>
+                      <Input
+                        type="text"
+                        id="discapacidadInput"
+                        value={discapacidad}
+                        onChange={(e) => setDiscapacidad(e.target.value)}
+                      />
+                    </FormGroup>
+                    <FormGroup>
+                      <Label for="fechaNacimientoInput">
+                        Fecha de Nacimiento
+                      </Label>
+                      <Input
+                        type="date"
+                        id="fechaNacimientoInput"
+                        value={fechaNacimiento}
+                        onChange={(e) => setFechaNacimiento(e.target.value)}
+                      />
+                    </FormGroup>
+                  </Col>
+                </Row>
 
-                  <div class="col-12">
-                    <label for="email" class="form-label">
-                      Email
-                    </label>
-                    <input
-                      type="email"
-                      class="form-control"
-                      id="email"
-                      placeholder="ejemplo@ejemplo.com"
-                    ></input>
-                    <div class="invalid-feedback">El email no es válido.</div>
-                  </div>
-
-                  <div class="col-12">
-                    <label for="telefono" class="form-label">
-                      Teléfono<span class="text-muted">(Opcional)</span>
-                    </label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="telefono"
-                    ></input>
-                  </div>
-
-                  <div class="col-12">
-                    <label for="password" class="form-label">
-                      Contraseña
-                    </label>
-                    <input
-                      type="password"
-                      class="form-control"
-                      id="passwd"
-                      placeholder="Contraseña"
-                    ></input>
-                    <div class="invalid-feedback">Contraseña no válida.</div>
-                  </div>
-
-                  <div class="col-12">
-                    <label for="password" class="form-label">
-                      Repita la Contraseña
-                    </label>
-                    <input
-                      type="password"
-                      class="form-control"
-                      id="passwd"
-                      placeholder="Contraseña"
-                    ></input>
-                    <div class="invalid-feedback">Contraseña no válida.</div>
-                  </div>
-
-                  <div class="col-12">
-                    <label for="discapacidad" class="form-label">
-                      Discapacidad
-                    </label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="discapacidad"
-                    ></input>
-                  </div>
-
-                  <div class="col-12">
-                    <label for="Fecha" class="form-label">
-                      Fecha de Nacimiento
-                    </label>
-                    <input type="date" class="form-control" id="Fecha"></input>
-                  </div>
-                </div>
-
-                <hr class="my-4"></hr>
-
-                <button class="w-100 btn btn-primary btn-lg" type="submit">
-                  Registrarse
-                </button>
-              </form>
+                <Row style={{ marginTop: "15px" }}>
+                  <Col>
+                    <Button type="submit" color="primary">
+                      Registrarse
+                    </Button>{" "}
+                    <Button
+                      class="btn btn-danger"
+                      type="button"
+                      onClick={cancelar}
+                    >
+                      Cancelar
+                    </Button>
+                  </Col>
+                </Row>
+              </Form>
             </div>
           </div>
         </main>
       </div>
     </>
   );
-}
+};
 
 export default ResgistrarPlayer;

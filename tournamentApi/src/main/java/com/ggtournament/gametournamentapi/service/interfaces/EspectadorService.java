@@ -10,6 +10,8 @@ public interface EspectadorService {
 
     public Optional<Espectador> findById(Integer id);
 
+    public Espectador findByEmail(String email);
+
     public Espectador save(Espectador espectador);
 
     public void deleteById(Integer id);
