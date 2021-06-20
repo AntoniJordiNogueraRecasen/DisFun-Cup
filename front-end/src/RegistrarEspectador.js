@@ -6,7 +6,6 @@ import { Button, Form, FormGroup, Label, Input } from "reactstrap";
 import { Row, Col } from "reactstrap";
 import { Redirect } from "react-router-dom";
 const ResgistrarEspectador = (props) => {
-  const [apuesta, setApuesta] = useState("");
   const [dni, setDNI] = useState("");
   const [email, setEmail] = useState("");
   const [telefono, setTelefono] = useState("");
@@ -20,7 +19,8 @@ const ResgistrarEspectador = (props) => {
     e.preventDefault();
 
     let userData = {
-      apuesta: apuesta,
+      asiento: null,
+      apuesta: null,
       dni: dni,
       email: email,
       telefono: telefono,
@@ -110,15 +110,6 @@ const ResgistrarEspectador = (props) => {
                         id="passwordInput"
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
-                      />
-                    </FormGroup>
-                    <FormGroup>
-                      <Label for="discapacidadInput">Apuesta (€)</Label>
-                      <Input
-                        type="number"
-                        id="discapacidadInput"
-                        value={apuesta}
-                        onChange={(e) => setApuesta(e.target.value + "")}
                       />
                     </FormGroup>
                   </Col>

@@ -9,8 +9,7 @@ public class Espectador {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idespectador;
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "asiento", nullable = false, length = 45)
+    @Column(name = "asiento", nullable = true, length = 45)
     private String asiento;
     @Column(name = "apuesta", nullable = true, length = 45)
     private String apuesta;

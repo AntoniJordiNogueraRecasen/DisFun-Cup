@@ -39,24 +39,46 @@ function Cups() {
   );
 }
 
-function Inscribe() {
-  return (
-    <Link to="/login" class="nav-link px-2">
-      Entrar
-    </Link>
-  );
-}
-function Subscribe() {
-  return (
-    <Link to="/cover" class="nav-link px-2">
-      Registrar
-    </Link>
-  );
-}
+const NavTop = (props) => {
+  function Inscribe() {
+    if (props.uid === 0) {
+      return (
+        <Link to="/login" class="nav-link px-2">
+          Entrar
+        </Link>
+      );
+    }
 
-function NavTop() {
+    return (
+      <h3>
+        {props.user.nombre} {props.user.apellido}
+      </h3>
+    );
+  }
+  function Subscribe() {
+    console.log("UID RECEIVED: " + props.uid);
+    if (props.uid === 0) {
+      return (
+        <Link to="/cover" class="nav-link px-2">
+          Registrar
+        </Link>
+      );
+    }
+
+    return (
+      <Link onClick={logout} class="nav-link px-2">
+        Logout
+      </Link>
+    );
+  }
+
+  function logout() {
+    window.location.reload();
+    props.logout();
+  }
+
   return (
-   <>
+    <>
       <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <div class="container-fluid">
           <button
@@ -97,8 +119,8 @@ function NavTop() {
         </div>
       </nav>
       <br></br>
-   </>
+    </>
   );
-}
+};
 
 export default NavTop;

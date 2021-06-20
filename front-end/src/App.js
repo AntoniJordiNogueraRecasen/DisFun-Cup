@@ -37,7 +37,6 @@ function App() {
     let promise = WebUserModel.getSpecificUser(x.email);
     promise.then((data) => {
       let user = data;
-      console.log(user);
       setUser(user);
     });
     loadData();
@@ -53,6 +52,12 @@ function App() {
     console.log(x);
   }
 
+  async function logout() {
+    setUID(0);
+    setUser({});
+    loadData();
+  }
+
   useEffect(() => {
     loadData();
   }, [user]);
@@ -60,7 +65,7 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <NavTop />
+        <NavTop user={user} uid={uid} logout={logout} />
         <Container>
           <Switch>
             <Route exact path="/" render={() => <Corepage />} />
