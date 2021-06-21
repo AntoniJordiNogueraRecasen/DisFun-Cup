@@ -17,17 +17,20 @@ import { Container, Row, Col } from "reactstrap";
 import WebUserModel from "./models/WebUser";
 import PlayerModel from "./models/Participante";
 import EspectadorModel from "./models/Espectador";
+import TorneoModel from "./models/Torneo";
 
 function App() {
   const [uid, setUID] = useState(0);
   const [user, setUser] = useState({});
+  const [torneos, setTorneos] = useState([{}]);
 
   async function loadData() {
     if (uid === 0) {
-      return;
     } else {
       console.log("UID VALUE: " + uid);
     }
+    let torneos = await TorneoModel.getAll();
+    setTorneos(torneos);
   }
 
   async function login(email, password) {
@@ -60,7 +63,7 @@ function App() {
 
   useEffect(() => {
     loadData();
-  }, [user]);
+  }, []);
 
   return (
     <>
@@ -87,7 +90,7 @@ function App() {
             <Route path="/contact" render={() => <Contact />} />
             <Route path="/cups" render={() => <Cups />} />
             <Route path="/news" render={() => <News />} />
-            <Route path="/torneo" render={() => <Torneo />} />
+            <Route path="/torneo" render={() => <Torneo torneos={torneos} />} />
           </Switch>
         </Container>
       </BrowserRouter>
