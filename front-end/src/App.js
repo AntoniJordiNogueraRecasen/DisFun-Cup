@@ -11,6 +11,7 @@ import Contact from "./Contact.js";
 import Cups from "./Cups.js";
 import News from "./News.js";
 import Torneo from "./Torneo";
+import Apuntado from "./Apuntado";
 import { BrowserRouter, Link, Switch, Route } from "react-router-dom";
 import { Container, Row, Col } from "reactstrap";
 
@@ -91,6 +92,7 @@ function App() {
             <Route path="/cups" render={() => <Cups />} />
             <Route path="/news" render={() => <News />} />
             <Route path="/torneo" render={() => <Torneo torneos={torneos} />} />
+            <Route path="/apuntado" render={() => <Apuntado />} />
           </Switch>
         </Container>
       </BrowserRouter>

@@ -12,9 +12,9 @@ function Lol() {
       <div class="col fondo">
         <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg fondoLol">
           <div>
-            <a href="#" class="rainbow-button">
+            <Link to="/apuntado" className="linkToSee rainbow-button">
               Apuntate
-            </a>
+            </Link>
             <div className="linkToSeeDiv">
               <Link to="/torneo" className="linkToSee">
                 VER
@@ -32,9 +32,9 @@ function Clash() {
       <div class="col fondo">
         <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg fondoClash">
           <div>
-            <a href="#" class="rainbow-button">
+            <Link to="/apuntado" className="linkToSee rainbow-button">
               Apuntate
-            </a>
+            </Link>
             <div className="linkToSeeDiv">
               <Link to="/torneo" className="linkToSee">
                 VER
@@ -52,9 +52,9 @@ function Fifa() {
       <div class="col fondo">
         <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg fondoFifa">
           <div>
-            <a href="#" class="rainbow-button">
+            <Link to="/apuntado" className="linkToSee rainbow-button">
               Apuntate
-            </a>
+            </Link>
             <div className="linkToSeeDiv">
               <Link to="/torneo" className="linkToSee">
                 VER
@@ -72,9 +72,9 @@ function Pubg() {
       <div class="col fondo">
         <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg fondoPUBG">
           <div>
-            <a href="#" class="rainbow-button">
+            <Link to="/apuntado" className="linkToSee rainbow-button">
               Apuntate
-            </a>
+            </Link>
             <div className="linkToSeeDiv">
               <Link to="/torneo" className="linkToSee">
                 VER
@@ -92,9 +92,9 @@ function GTS() {
       <div class="col fondo">
         <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg fondoGTS">
           <div>
-            <a href="#" class="rainbow-button">
+            <Link to="/apuntado" className="linkToSee rainbow-button">
               Apuntate
-            </a>
+            </Link>
             <div className="linkToSeeDiv">
               <Link to="/torneo" className="linkToSee">
                 VER
@@ -112,9 +112,9 @@ function Fortnite() {
       <div class="col fondo ">
         <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg fondoFortnite ">
           <div>
-            <a href="#" class="rainbow-button">
+            <Link to="/apuntado" className="linkToSee rainbow-button">
               Apuntate
-            </a>
+            </Link>
             <div className="linkToSeeDiv">
               <Link to="/torneo" className="linkToSee">
                 VER
