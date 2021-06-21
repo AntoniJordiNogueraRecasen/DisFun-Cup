@@ -16,13 +16,18 @@ function CircleNews() {
         <div class="col-lg-4">
           <img src={Toni} class="carrusel1 rounded-circle nosotros"></img>
           <h2>Antoni Jordi</h2>
-          <p>Mi porque del proyecto</p>
+          <p>
+            Considero que hay verdaderas proezas que tienen que ser conocidas.
+          </p>
         </div>
         <div class="col-lg-4">
           <img src={Viktor} class="carrusel1 rounded-circle nosotros"></img>
 
           <h2>Victor Gómez</h2>
-          <p>Mi porque del proyecto</p>
+          <p>
+            Me gustaria fomentar que toda la gente pueda jugar a videojuegos y
+            pasarselo en grande
+          </p>
         </div>
         <div class="col-lg-4">
           <img src={Pau} class="carrusel1 rounded-circle nosotros"></img>
