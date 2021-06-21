@@ -35,7 +35,7 @@ function Contact() {
                         className="gmail"
                         href="mailto:correoempresa@gmail.com"
                       >
-                        DisfunCup@nombre.com
+                        info@disfuncup.cat
                       </a>
                     </li>
                   </ul>

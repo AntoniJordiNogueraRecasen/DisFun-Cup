@@ -26,17 +26,12 @@ function App() {
   const [torneos, setTorneos] = useState([{}]);
 
   async function loadData() {
-    if (uid === 0) {
-    } else {
-      console.log("UID VALUE: " + uid);
-    }
     let torneos = await TorneoModel.getAll();
     setTorneos(torneos);
   }
 
   async function login(email, password) {
     let x = await WebUserModel.login(email, password);
-    console.log("USER LOGIN: " + x.email);
     setUID(x.idwebuser);
     let promise = WebUserModel.getSpecificUser(x.email);
     promise.then((data) => {
@@ -48,12 +43,10 @@ function App() {
 
   async function registerPlayer(playerData) {
     let x = await PlayerModel.registerParticipante(playerData);
-    console.log(x);
   }
 
   async function registerEspectador(userData) {
     let x = await EspectadorModel.registereEspectador(userData);
-    console.log(x);
   }
 
   async function logout() {
@@ -64,7 +57,7 @@ function App() {
 
   useEffect(() => {
     loadData();
-  });
+  }, []);
 
   return (
     <>

@@ -57,7 +57,6 @@ const NavTop = (props) => {
     );
   }
   function Subscribe() {
-    console.log("UID RECEIVED: " + props.uid);
     if (props.uid === 0) {
       return (
         <Link to="/cover" class="nav-link px-2">

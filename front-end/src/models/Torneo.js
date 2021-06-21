@@ -16,7 +16,6 @@ async function getAll() {
   const response = await fetch(API, opcionesFetch);
   if (response.ok) {
     const resp = await response.json();
-    console.log("RESPUESTA: " + resp);
     return resp;
   } else {
     return [];
