@@ -1,9 +1,6 @@
 import "./style/App.css";
 import React from "react";
 import "./style/bootstrap.min.css";
-import { Button } from "reactstrap";
-
-import { BrowserRouter, Link, Switch, Route } from "react-router-dom";
 import { Container, Row, Col } from "reactstrap";
 import "./style/Apuntado.css";
 import doneImg from "./img/doneImg.png";

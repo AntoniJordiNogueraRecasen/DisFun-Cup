@@ -1,10 +1,9 @@
 import "./style/App.css";
 import React from "react";
 import "./style/bootstrap.min.css";
-import { Button } from "reactstrap";
 import "./style/features.css";
 
-import { BrowserRouter, Link, Switch, Route } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Lol() {
   return (

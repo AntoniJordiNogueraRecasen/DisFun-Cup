@@ -3,6 +3,9 @@ import React from "react";
 import "./style/bootstrap.min.css";
 
 import { Table } from "reactstrap";
+
+import { Link } from "react-router-dom";
+
 const Torneo = (props) => {
   let filas = props.torneos.map((torneo) => {
     return (
@@ -13,9 +16,9 @@ const Torneo = (props) => {
           <td>{torneo.fecha}</td>
           <td>{torneo.recompensas}</td>
           <td>
-            <a href="#" class="rainbow-button">
+            <Link to="/apuntado" className="linkToSee rainbow-button">
               Apuntate
-            </a>
+            </Link>
           </td>
         </tr>
       </>

@@ -1,7 +1,7 @@
 import React from "react";
 import iconCasa from "./img/house.png";
 import "./style/bootstrap.min.css";
-import { BrowserRouter, Link, Switch, Route } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./style/App.css";
 import "./style/Navbar.css";
 function NavCasa() {

@@ -12,8 +12,8 @@ import Cups from "./Cups.js";
 import News from "./News.js";
 import Torneo from "./Torneo";
 import Apuntado from "./Apuntado";
-import { BrowserRouter, Link, Switch, Route } from "react-router-dom";
-import { Container, Row, Col } from "reactstrap";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { Container } from "reactstrap";
 
 import WebUserModel from "./models/WebUser";
 import PlayerModel from "./models/Participante";
@@ -64,7 +64,7 @@ function App() {
 
   useEffect(() => {
     loadData();
-  }, []);
+  });
 
   return (
     <>
