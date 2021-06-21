@@ -1,0 +1,17 @@
+.navbar {
+  background-color: rgba(105, 33, 105, 0.596);
+}
+
+.linkToSee {
+  color: black;
+}
+
+.linkToSeeDiv {
+  border-radius: 15px;
+  background-color: white;
+  position: absolute;
+  top: 13px;
+  right: 20px;
+  width: 50px;
+  text-align: center;
+}

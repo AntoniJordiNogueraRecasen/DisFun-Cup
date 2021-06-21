@@ -3,6 +3,7 @@ import iconCasa from "./img/house.png";
 import "./style/bootstrap.min.css";
 import { BrowserRouter, Link, Switch, Route } from "react-router-dom";
 import "./style/App.css";
+import "./style/Navbar.css";
 function NavCasa() {
   return (
     <Link to="/" class="nav-link px-2">
@@ -50,9 +51,9 @@ const NavTop = (props) => {
     }
 
     return (
-      <h3>
+      <p style={{ color: "white", marginTop: "3px", fontSize: "20px" }}>
         {props.user.nombre} {props.user.apellido}
-      </h3>
+      </p>
     );
   }
   function Subscribe() {
@@ -79,7 +80,7 @@ const NavTop = (props) => {
 
   return (
     <>
-      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top">
         <div class="container-fluid">
           <button
             class="navbar-toggler"

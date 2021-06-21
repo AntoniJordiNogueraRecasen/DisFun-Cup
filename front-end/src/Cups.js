@@ -4,6 +4,8 @@ import "./style/bootstrap.min.css";
 import { Button } from "reactstrap";
 import "./style/features.css";
 
+import { BrowserRouter, Link, Switch, Route } from "react-router-dom";
+
 function Lol() {
   return (
     <>
@@ -13,9 +15,11 @@ function Lol() {
             <a href="#" class="rainbow-button">
               Apuntate
             </a>
-            <a href="/torneo">
-              <button className="ver">VER</button>
-            </a>
+            <div className="linkToSeeDiv">
+              <Link to="/torneo" className="linkToSee">
+                VER
+              </Link>
+            </div>
           </div>
         </div>
       </div>
@@ -31,9 +35,11 @@ function Clash() {
             <a href="#" class="rainbow-button">
               Apuntate
             </a>
-            <a href="/torneo">
-              <button className="ver">VER</button>
-            </a>
+            <div className="linkToSeeDiv">
+              <Link to="/torneo" className="linkToSee">
+                VER
+              </Link>
+            </div>
           </div>
         </div>
       </div>
@@ -49,9 +55,11 @@ function Fifa() {
             <a href="#" class="rainbow-button">
               Apuntate
             </a>
-            <a href="/torneo">
-              <button className="ver">VER</button>
-            </a>
+            <div className="linkToSeeDiv">
+              <Link to="/torneo" className="linkToSee">
+                VER
+              </Link>
+            </div>
           </div>
         </div>
       </div>
@@ -67,9 +75,11 @@ function Pubg() {
             <a href="#" class="rainbow-button">
               Apuntate
             </a>
-            <a href="/torneo">
-              <button className="ver">VER</button>
-            </a>
+            <div className="linkToSeeDiv">
+              <Link to="/torneo" className="linkToSee">
+                VER
+              </Link>
+            </div>
           </div>
         </div>
       </div>
@@ -85,9 +95,11 @@ function GTS() {
             <a href="#" class="rainbow-button">
               Apuntate
             </a>
-            <a href="/torneo">
-              <button className="ver">VER</button>
-            </a>
+            <div className="linkToSeeDiv">
+              <Link to="/torneo" className="linkToSee">
+                VER
+              </Link>
+            </div>
           </div>
         </div>
       </div>
@@ -103,9 +115,11 @@ function Fortnite() {
             <a href="#" class="rainbow-button">
               Apuntate
             </a>
-            <a href="/torneo">
-              <button className="ver">VER</button>
-            </a>
+            <div className="linkToSeeDiv">
+              <Link to="/torneo" className="linkToSee">
+                VER
+              </Link>
+            </div>
           </div>
         </div>
       </div>
